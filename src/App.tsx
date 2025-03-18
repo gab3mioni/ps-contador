@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import CounterButton from './components/CounterButton/CounterButton'
 
 import './App.css'
 
@@ -10,13 +11,8 @@ function App() {
       <h1>Contador</h1>
       <p>{count}</p>
       <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          +
-        </button>
-
-        <button onClick={() => setCount((count) => count - 1)}>
-          -
-        </button>
+      <CounterButton onClick={() => setCount(count + 1)} label="+" />
+      <CounterButton onClick={() => setCount(count - 1)} label="-" />
       </div>
     </>
   )
